@@ -5,7 +5,7 @@ total_calory_list = []
 current_max_calory = 0
 current_elf = 1
 
-def getTop3FromList(list): # gets top 3 elements from list by popping the max 3 times
+def getTop3FromList(list): # gets top 3 elements from list by popping the max 3 times (destructive)
     i=3
     new_list = []
     for el in list:
@@ -15,6 +15,12 @@ def getTop3FromList(list): # gets top 3 elements from list by popping the max 3 
             new_list.append(maxel)
             i -= 1
     return new_list
+
+def addTop3FromList(list):
+    sum = 0
+    for el in list:
+        sum += el
+    return sum
 
 with open(filename) as f:
     calory_list = f.readlines()
@@ -33,7 +39,9 @@ with open(filename) as f:
                 current_max_elf = current_elf
 
         print('Max calory is: ' + str(current_max_calory) + '\nCarried by elf: ' + str(current_max_elf))
-        print('Max elves list: ' + str(getTop3FromList(total_calory_list)))
+        top_3_list = getTop3FromList(total_calory_list)
+        print('Max elves list: ' + str(top_3_list))
+        print('Total top 3 calories: ' + str(addTop3FromList(top_3_list)))
     else:
         print('No elves')
 
