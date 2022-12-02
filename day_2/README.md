@@ -46,6 +46,8 @@ Following the Elf's instructions for the second column, what would your total sc
 # Execution
 
 - Requires node
+- Set `fileName` variable to the file you want to test
+
 
 ```sh
 $ node day2.js
