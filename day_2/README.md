@@ -45,10 +45,10 @@ Following the Elf's instructions for the second column, what would your total sc
 
 # Execution
 
-- Requires node
-- Set `fileName` variable to the file you want to test
+- Requires node [(WSL2 Setup)](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
+- Make sure you provide the input file correctly
 
 
 ```sh
-$ node day2.js
+$ node day2.js input.txt
 ```

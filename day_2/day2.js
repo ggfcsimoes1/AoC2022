@@ -7,9 +7,8 @@
     C = Scissors    Z = Win this game */
 
 const {readFileSync, promises: fsPromises} = require('fs');
-
-/* FILE NAME HERE */
-const fileName = './i3.txt'
+  
+const fileName = './' + process.argv[2]
 
 var totalScore = 0          // part 1 score
 var totalScore2 = 0         // part 2 score
