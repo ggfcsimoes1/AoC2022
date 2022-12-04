@@ -1,5 +1,5 @@
 print('Enter filename')
-filename = 'i2.txt' # input()
+filename = input()
 
 def form_pairs(list):
     new_list = []
