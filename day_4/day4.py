@@ -26,7 +26,6 @@ with open(filename) as f:
     cleanup_sections = f.read().splitlines()
     parsed_pairs = form_pairs(cleanup_sections)
     for pairs in parsed_pairs:
-        print(pairs)
         if is_fully_contained(pairs[0], pairs[1]):
             containCount += 1
         if is_overlapping(pairs[0], pairs[1]):
